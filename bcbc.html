@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cs/bootstrap.min.css" />
+</head>
+<body>
+    <!-- 方法名查询 -->
+    <div style="margin: 0 auto;width: 50%;">
+        <span>方法名：</span>
+        <select class="searchValue">
+            <option>请选择</option>
+            <option>方法1</option>
+            <option>方法2</option>
+            <option>C</option>
+        </select>
+        <button class="search">查询</button>
+    </div>
+
+    <!-- 方法信息 -->
+    <div style="margin: 0 auto;width: 50%;">
+        <!-- 方法名 -->
+        <div>
+            <span>
+                方法名：
+            </span>
+            <input type="text" class="fname"/>
+        </div>
+        <!-- 方法路径 -->
+        <div>
+            <span>
+                方法路径：
+            </span>
+            <input type="text" class="url"/>
+        </div>
+        <!-- 参数 -->
+        <div>
+            <span>
+                参数：
+            </span>
+            <input type="text" class="params"/>
+        </div>
+        <!-- 返回值 -->
+        <div>
+            <span>
+                返回值：
+            </span>
+            <input type="text" class="returns"/>
+        </div>
+        <!-- 新增按钮 -->
+        <button class="add">新增</button>
+    </div>
+
+    <!-- 表格部分 -->
+    <table align="center" border="1" style="width: 50%;">
+        <thead>
+            <tr>
+                <th>序号</th>
+                <th>方法名</th>
+                <th>URL</th>
+                <th>参数</th>
+                <th>返回值</th>
+                <th>操作</th>         
+            </tr>
+        </thead>
+        <tbody>
+            <!-- <tr>
+                <td>1</td>
+                <td>A</td>
+                <td>/A</td>
+                <td>无参</td>
+                <td>'返回值'</td>
+                <td>
+                    <a href="#">删</a>
+                    <a href="#">改</a>
+                </td>
+            </tr> -->
+        </tbody>
+    </table>
+
+    <!-- 模态框 -->
+    <div>
+       <!-- 模态框（Modal） -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <button type="button" class="close" data-dismiss="modal" aria-label="close" aria-hidden="true">&times;</button> -->
+                <h5 class="modal-title">详细信息</h5>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="editfname">方法名</label>
+                        <select class="form-control" id="editfname">
+                            <option>请选择</option>
+                            <option>方法1</option>
+                            <option>方法2</option>
+                            <option>C</option>
+                        </select>
+                      </div>
+                    <div class="form-group">
+                      <label for="editurl">url</label>
+                      <input type="text" class="form-control" id="editurl" placeholder="editurl">
+                    </div>
+                    <div class="form-group">
+                      <label for="editparams">参数</label>
+                      <input type="text" class="form-control" id="editparams" placeholder="params">
+                    </div>
+                    <div class="form-group">
+                        <label for="editreturns">返回值</label>
+                        <input type="text" class="form-control" id="editreturns" placeholder="returns">
+                      </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+            </div>
+            <div class="modal-footer">
+                <!-- <button type="button" class="btn btn-primary" data-dismiss="modal">发送</button> -->
+                <button type="button" class="btn-primary" id="save" data-dismiss="modal" >关闭</button>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/bcbc.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</html>
